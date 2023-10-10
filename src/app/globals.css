@@ -18,6 +18,8 @@
 
 html {
   font-size: 16px;
+  font-family: "Verdana","arial","microsoft yahei","STXihei";
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 375px) {
