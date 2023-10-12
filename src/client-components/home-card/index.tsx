@@ -5,27 +5,28 @@ const HomeCard = () => {
   const cards = [
     {
       name: '煮面',
-      icon: '🍜'
+      icon: '🍜',
+      type: 'boil'
     },
     {
       name: '冰淇淋',
-      icon: '🍦'
+      icon: '🍦',
+      type: 'icecream'
     },
     {
       name: '炸雞',
-      icon: '🍗'
-    },
-    {
-      name: '蛋糕',
-      icon: '🍰'
-    },
-    {
-      name: '漢堡',
-      icon: '🍔'
+      icon: '🍗',
+      type: 'fried'
     },
     {
       name: '咖啡',
-      icon: '☕'
+      icon: '☕',
+      type: 'coffee'
+    },
+    {
+      name: '视觉码垛',
+      type: 'palletizing'
+
     }
   ]
   return (

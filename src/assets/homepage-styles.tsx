@@ -13,7 +13,9 @@ grid-template-columns: repeat(auto-fit, minmax(7.87rem, 1fr));
 export const CardStyle = styled.div`
 width: 7.87rem;
 height: 7.87rem;
-border-image: linear-gradient(deepskyblue, deeppink) 20 / 10px;
+/* border-image: linear-gradient(deepskyblue, deeppink) 20 / 10px; */
+border: 8px solid #FF7C08;
+border-radius: 50%;
 overflow: hidden;
 display: inline-flex;
 align-items: center;
