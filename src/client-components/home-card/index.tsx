@@ -1,5 +1,5 @@
 'use client'
-import { SelectCard, CardStyle, Container, CardText, CardIconStyle } from "~/assets/homepage-styles"
+import { SelectCard, CardStyle, Container, CardText, CardIconStyle, CardBackground } from "~/assets/homepage-styles"
 import { cardsInfo, type Card } from "~/constants"
 import Video from "../video"
 import { useRef } from "react"
@@ -43,7 +43,8 @@ const HomeCard = () => {
             return (
               <div key={index} onClick={() => selectScene(card)}>
                 <CardStyle>
-                  <CardIconStyle>{card.icon}</CardIconStyle>
+                  <img src={card.icon!} alt="" className="w-[10rem]" />
+                  <CardBackground />
                 </CardStyle>
                 <CardText>{card.name}</CardText>
               </div>

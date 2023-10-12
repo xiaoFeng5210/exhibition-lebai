@@ -15,26 +15,27 @@ export interface Card {
 export const cardsInfo: Card[] = [
   {
     name: '煮面',
-    icon: '🍜',
+    icon: '/image/boil.png',
     type: SceneType.boil
   },
   {
     name: '冰淇淋',
-    icon: '🍦',
+    icon: '/image/boil.png',
     type: SceneType.icecream
   },
   {
     name: '炸雞',
-    icon: '🍗',
+    icon: '/image/boil.png',
     type: SceneType.fried
   },
   {
     name: '咖啡',
-    icon: '☕',
+    icon: '/image/coffee.png',
     type: SceneType.coffee
   },
   {
     name: '视觉码垛',
+    icon: '/image/boil.png',
     type: SceneType.palletizing,
   }
 ]
