@@ -1,10 +1,15 @@
 'use client'
 import { SelectCard, CardStyle, Container, CardText, CardIconStyle } from "~/assets/homepage-styles"
 import { cardsInfo, type Card } from "~/constants"
+import Video from "../video"
+import { useRef } from "react"
 
 const HomeCard = () => {
+  const videoRef = useRef<typeof Video>(null)
   const selectScene = (card: Card) => {
-    console.log(card)
+    if (videoRef.current) {
+      (videoRef.current as any).open(card)
+    }
   }
   return (
     <Container>
@@ -22,6 +27,7 @@ const HomeCard = () => {
           })
         }
       </SelectCard>
+      <Video ref={videoRef} />
     </Container>
   )
 }
