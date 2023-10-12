@@ -1,5 +1,5 @@
 'use client'
-import { SelectCard, CardStyle } from "~/assets/homepage-styles"
+import { SelectCard, CardStyle, Container, CardText, CardIconStyle } from "~/assets/homepage-styles"
 
 const HomeCard = () => {
   const cards = [
@@ -29,17 +29,22 @@ const HomeCard = () => {
     }
   ]
   return (
-    <div className="w-[80%] flex-1 flex items-center">
+    <Container>
         <SelectCard className="w-full">
           {
             cards.map((card, index) => {
               return (
-                  <CardStyle key={index}></CardStyle>
+                <div key={index}>
+                  <CardStyle>
+                    <CardIconStyle>{card.icon}</CardIconStyle>
+                  </CardStyle>
+                  <CardText>{card.name}</CardText>
+                </div>
               )
             })
           }
         </SelectCard>
-    </div>
+    </Container>
   )
 }
 export default HomeCard
