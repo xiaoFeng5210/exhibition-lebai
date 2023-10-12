@@ -1,50 +1,27 @@
 'use client'
 import { SelectCard, CardStyle, Container, CardText, CardIconStyle } from "~/assets/homepage-styles"
+import { cardsInfo, type Card } from "~/constants"
 
 const HomeCard = () => {
-  const cards = [
-    {
-      name: '煮面',
-      icon: '🍜',
-      type: 'boil'
-    },
-    {
-      name: '冰淇淋',
-      icon: '🍦',
-      type: 'icecream'
-    },
-    {
-      name: '炸雞',
-      icon: '🍗',
-      type: 'fried'
-    },
-    {
-      name: '咖啡',
-      icon: '☕',
-      type: 'coffee'
-    },
-    {
-      name: '视觉码垛',
-      type: 'palletizing'
-
-    }
-  ]
+  const selectScene = (card: Card) => {
+    console.log(card)
+  }
   return (
     <Container>
-        <SelectCard className="w-full">
-          {
-            cards.map((card, index) => {
-              return (
-                <div key={index}>
-                  <CardStyle>
-                    <CardIconStyle>{card.icon}</CardIconStyle>
-                  </CardStyle>
-                  <CardText>{card.name}</CardText>
-                </div>
-              )
-            })
-          }
-        </SelectCard>
+      <SelectCard className="w-full">
+        {
+          cardsInfo.map((card, index) => {
+            return (
+              <div key={index} onClick={() => selectScene(card)}>
+                <CardStyle>
+                  <CardIconStyle>{card.icon}</CardIconStyle>
+                </CardStyle>
+                <CardText>{card.name}</CardText>
+              </div>
+            )
+          })
+        }
+      </SelectCard>
     </Container>
   )
 }
