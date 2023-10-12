@@ -24,7 +24,7 @@ const Video = forwardRef((props, ref) => {
       <ModalContent>
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
+        <ModalBody className='flex justify-center items-center'>
           <VideoStyles controls muted autoPlay loop>
             <source src="/mp4/煮面.mp4" type="video/mp4" />
           </VideoStyles>
